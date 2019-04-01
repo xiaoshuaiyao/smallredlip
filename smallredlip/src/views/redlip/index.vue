@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Concent from "./concent"
-import Footer from "./footer"
+import Concent from "../../components/redlip/concent";
+import Footer from "../../components/redlip/footer";
 export default {
-    name:"redlip",
-    components:{ 
-      Footer,
-      Concent
-    }
-}
+  name: "redlip",
+  components: {
+    Footer,
+    Concent
+  }
+};
 </script>

@@ -73,18 +73,6 @@ export default {
           say: "1",
           collect: "收藏",
           to:"/video"
-        },{
-           img:
-            "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
-          name: "路遥",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
-          title: "一根皮筋，瘦锁骨！",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/video"
         }
       ]
     };
@@ -95,15 +83,17 @@ export default {
 
 <style scoped lang="scss">
 .concent{
-  height: 30rem;
-  overflow: auto;
+  position: absolute;
+  top: .896rem;
+  width: 100%;
+  height: 100%;
+  overflow:scroll;
 }
 .concent_text{
   position: relative;
   padding: 0 0.3rem;
   width: 7.5rem;
   height: 7.78rem;
-  margin-top: .896rem;
   border-bottom: 0.2rem solid #efefef;
 }
 .concent_top {

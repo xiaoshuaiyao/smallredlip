@@ -1,5 +1,8 @@
 export default {
     path:"/shopping",
     component:()=>import("@/views/shopping"),
-    name:"shopping"
+    name:"shopping",
+    meta:{
+        tabBarFlag:false
+    }
 }

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <Tabbar/>
-   <router-view/>
+    <Tabbar v-if="this.$route.meta.tabBarFlag"/>
+    <keep-alive>
+<router-view/>
+    </keep-alive>
+   
   </div>
 </template>
 <script>
