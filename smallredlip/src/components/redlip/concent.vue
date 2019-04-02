@@ -2,9 +2,9 @@
   <div class="concent">
     <div class="concent_text" v-for="(item,index) in concents">
       <div class="concent_top">
-        <router-link class="concent_top_left"  tag="div" :to="item.to">
+        <div class="concent_top_left">
           <img :src="item.img" alt>
-        </router-link >
+        </div >
         <div class="concent_top_center">
           <a href>{{item.name}}</a>
         </div>
@@ -12,19 +12,18 @@
           <b>{{item.watch}}</b>
         </div>
       </div>
-      <div class="concent_mid">
+      <router-link class="concent_mid" :to="item.to" tag="div">
         <img :src="item.video" alt>
-      </div>
-      <div class="concent_btm">
+      </router-link>
+      <router-link class="concent_btm" :to="item.to" tag="div">
         <p>{{item.title}}</p>
-      </div>
-      <div class="concent_bottom">
+      </router-link>
+      <router-link class="concent_bottom" :to="item.to" tag="div" >
         <span>{{item.zan}}</span>
         <span>{{item.say}}</span>
         <span>{{item.collect}}</span>
-      </div>
+      </router-link>
     </div>
-    <router-view></router-view>
   </div>
   
 </template>
@@ -46,7 +45,7 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/video"
+          to:"/redlip/video"
         },
         {
            img:
@@ -59,7 +58,7 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/video"
+          to:"/redlip/video"
         },
         {
            img:
@@ -72,7 +71,7 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/video"
+          to:"/redlip/video"
         }
       ]
     };

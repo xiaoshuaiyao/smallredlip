@@ -66,7 +66,7 @@ export default {
 <style scoped lang="scss">
 .top {
   margin-top: 0.9rem;
-  height: 100%;
+  height: 11.7rem;
 }
 .top_video {
   width: 100%;

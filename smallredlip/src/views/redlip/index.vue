@@ -2,6 +2,7 @@
   <div class="redlip">
     <Concent/>
     <Footer/>
+    <router-view></router-view>
   </div>
 </template>
 
