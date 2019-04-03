@@ -1,8 +1,73 @@
 export default {
+	 
+	  
     path:"/shopping",
     component:()=>import("@/views/shopping"),
     name:"shopping",
     meta:{
         tabBarFlag:false
-    }
+    },
+		children:[
+		{
+			path:"synth",
+			component:()=>import("@/components/shopping/synth"),
+			name:"synth"
+		},
+		{
+			path:"new",
+			component:()=>import("@/components/shopping/new"),
+			name:"new"
+		},
+		{
+			path:"price",
+			component:()=>import("@/components/shopping/price"),
+			name:"price"
+		},
+		{
+			path:"sales",
+			component:()=>import("@/components/shopping/sales"),
+			name:"sales"
+		},
+		{
+			path:"acare",
+			component:()=>import("@/components/shopping/acare"),
+			name:"acare"
+		},
+		{
+			path:"achoiceness",
+			component:()=>import("@/components/shopping/achoiceness"),
+			name:"achoiceness"
+		},
+		{
+			path:"afashion",
+			component:()=>import("@/components/shopping/afashion"),
+			name:"afashion"
+		},
+		{
+			path:"aliving",
+			component:()=>import("@/components/shopping/aliving"),
+			name:"aliving"
+		},
+		{
+			path:"apersonal",
+			component:()=>import("@/components/shopping/apersonal"),
+			name:"apersonal"
+		},
+		{
+			path:"aranking",
+			component:()=>import("@/components/shopping/aranking"),
+			name:"aranking"
+		},
+		{
+			path:"askin",
+			component:()=>import("@/components/shopping/askin"),
+			name:"askin"
+		},
+		{
+			path:"/shopping",
+			component:()=>import("@/components/shopping/synth"),
+			redirect:"/shopping/synth"
+		}
+	]
+	
 }

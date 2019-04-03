@@ -2,6 +2,7 @@
   <div class="shopping">
 		<Header/>
     <Concent/>
+
   </div>
 </template>
 
@@ -14,7 +15,8 @@ export default {
 		components:{
 			Header,
 		Concent
-	}
+	},
+
 }
 </script>
 <style lang="css">

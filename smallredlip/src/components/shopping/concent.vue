@@ -1,6 +1,7 @@
 <template>
 	<div class="concent">
-		<div class="concent_a">
+		
+			<div class="concent_a">
 			<router-link class="search-left" tag="div" to="/search">
 				<i class="iconfont" v-html="icon"></i>
 				<span>{{val}}</span>
@@ -9,10 +10,12 @@
 				<i class="iconfont" v-html="icon1"></i>
 			</div>
 		</div>
+		
+		
 
 		<div class="nav">
 			<ul>
-				<li v-for="item in concents">{{item}}</li>
+				<Router-link v-for="item in concents" tag="li" :to="item.to">{{item.p}}</Router-link>
 			</ul>
 
 		</div>
@@ -105,29 +108,23 @@
 			</ul>
 		</div>
 		
-		<div class="nav1">
+		<div class="nav2" :class="flag?'nav1':''">
 			<ul>
-				<li  @click="handleClick(index)" v-for="(item,index) in nav1" :class="index=indexCon?'active':''">{{item}}</li>
+				<router-link tag="li" to="/shopping/synth">综合</router-link>
+				<router-link tag="li" to="/shopping/new">最新</router-link>
+				<router-link tag="li" to="/shopping/sales">销量</router-link>
+				<router-link tag="li" to="/shopping/price">价格</router-link>
+				<li>仓库</li>
+				
+				
 
 			</ul>
 		</div>
+		<keep-alive>
+			<router-view></router-view>
+		</keep-alive>
 		
-		<div class="footer">
-			<ul>
-				<li>
-					<img src="https://wicdn.xiaohongchun.com/xhc-plat/1541765181989_4FDxEwzWe8.jpg" alt="">
-					<p>温泉卸妆水</p>
-					<p>UNNY 四合一温和卸妆水 500ml</p>
-					<p>￥69<span>99</span></p>
-				</li>
-				<li><img src="https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17634_1552471847566.jpg" alt="">
-					<p>滚走细纹黑眼圈</p>
-					<p>It's skin 伊思 红参蜗牛滚珠眼霜 15ml*2</p>
-					<p>￥189<span>295</span></p>
-				</li>
 
-			</ul>
-		</div>
 	</div>
 
 </template>
@@ -141,12 +138,44 @@
 		data() {
 			
 			return {
-				indexCon :0,
+					flag:false,
+					
+					
+					
 				icon: "&#xe647;",
 				val: "口红",
 				icon1: "&#xe6b8;",
 				concents: [
-					"精选", "排行榜", "护肤彩妆", "家居生活", "个人护理", "时尚穿搭", "没事保健"
+					{
+						p:"精选",
+						to:"achoiceness"
+					},
+					{
+						p:"排行榜",
+						to:"aranking"
+					},
+					{
+						p:"护肤彩妆",
+						to:"askin"
+					},
+					{
+						p:"家居生活",
+						to:"aliving"
+					},
+					{
+						p:"个人护理",
+						to:"apersonal"
+					},
+					{
+						p:"时尚穿搭",
+						to:"afashion"
+					},
+					{
+						p:"没事保健",
+						to:"acare"
+					}
+					
+					// "精选", "排行榜", "护肤彩妆", "家居生活", "个人护理", "时尚穿搭", "没事保健"
 				],
 				Img: "https://wicdn.xiaohongchun.com/goodsmark/1553570321577_J7Td2KmP54.jpg",
 				Img2: "https://wicdn.xiaohongchun.com/goodsmark/1554084603181_np2Hz4aNW5.jpg",
@@ -231,9 +260,29 @@
 						i:"More >"
 					}
 				],
-				nav1:[
-					"综合","销量","最新","价格","仓库"
-				]
+// 				nav1:[
+// 					{
+// 					a:"综合",
+// 					to:"synth"
+// 				},
+// 				{
+// 					a:"最新",
+// 					to:"new"
+// 				},
+// 				{
+// 					a:"销量",
+// 					to:"sales"
+// 				},
+// 				{
+// 					a:"价格",
+// 					to:"price"
+// 				},
+// 				{
+// 					a:"仓库",
+// 					
+// 				},
+// 				
+// 				]
 
 			}
 			
@@ -246,36 +295,47 @@
 					disableOnInteraction: false,
 				}
 			})
+			window.addEventListener('scroll', this.handleScroll)
+
+
 		},
 		methods:{
-			handleClick(n){
-			    this.indexCon = n;
-			    this.$emit("handleToggle",n);
-			}
+					handleScroll () {
+					var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+			  // console.log(scrollTop)
+				if(scrollTop>2805){
+					this.flag=true;
+				}else{
+					this.flag=false;
+				}
+			},
 		}
+
 	}
 </script>
 
 <style lang="scss" scoped>
 	.concent {
-		margin-top: 1.1rem;
-		overflow: auto;
-		width : 7.5rem;
-		height :14rem;		
-		.concent_a {
+		margin-top: 1.8rem;
+		
+		width : 100%;
+		
+	
+			.concent_a {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
-			position: flex;
+			position: fixed;
+			background : white;
+			z-index:5;
+			height : 0.9rem;
+			top : 0.9rem;
 			.search-left {
-				display: flex;
-				align-items: center;
 				width: 5.5rem;
 				border: 1px solid #ccc;
-				//background : red;
 				margin: 0rem 0.8rem 0 0.6rem;
 				border-radius: 0.4rem;
-
+				
 				.iconfont {
 					font-size: 0.4rem;
 					font-weight: 900;
@@ -304,29 +364,40 @@
 				}
 			}
 		}
+		
+		
 
 		.nav {
 			width: 100%;
 			// background : red;
-			margin-top: 0.1rem;
+			
 			background-color: white;
-			height: 0.6rem;
+			height: 0.66rem;
+			padding-left:0.1rem;
 			//background: yellow;
-			overflow: hidden;
-			position: flex;
+			// overflow: hidden;
+			position: fixed;
+			overflow:auto;
+			
+			z-index:5;
 			ul {
 				//background: pink;
 				height: 100%;
-				margin-left: 0.1rem;
+				width : 154%;
 
 				li {
 					margin: 0 0.5rem 0 0.1rem;
 					float: left;
 					line-height: 0.6rem;
-					font-size: 0.26rem;
-					color:black;
+					font-size: 0.28rem;
+					color:#222;
+					
 				}
 			}
+		}
+		.nav>ul>.router-link-active{
+			border-bottom: 0.04rem solid #ff3167;
+			    font-size: 0.32rem;
 		}
 
 		.Pic {
@@ -427,13 +498,15 @@
 				height : 100%;
 			}
 		}
-		.nav1{
+		.nav2{
 			width : 100%;
 			height : 0.88rem;
 
 			border-top: 3px solid #f5f5f5;
 			margin-top:0.3rem;
-			position: relative;
+			//position: sticky;
+
+			background : white;
 			ul{
 				li{
 					width : 20%;
@@ -445,54 +518,13 @@
 				}
 			}
 		}
-		.nav1>.active{
+		.nav1{
+				position: fixed;
+				top:200px;
+		}
+		.nav2>ul>.router-link-active{
 			    color: #ff3167;
 		}
-		.footer{
-			width : 100%;
-			height : 100%;
-			ul{
-				li{
-					width : 45%;
-					float : left;
-					margin-left:0.2rem;
-					img{
-						width : 3.4rem;
-					}
-					p:nth-of-type(1){
-						font-size: 0.26rem;
-						height: 0.5rem;
-						line-height: 0.5rem;
-						overflow: hidden;
-						font-weight: 600;
-						color: #222222;
-					}
-					p:nth-of-type(2){
-						color: #808080;
-						font-size: 0.26rem;
-						height: 0.69rem;
-						line-height: 1.4em;
-						font-family: "PingFangSC-Light";
-						font-weight: 300;
-						overflow: hidden;
-						width : 80%;
-					}
-					p:nth-of-type(3){
-						    margin-top: .2rem;
-							font-size: 0.26rem;
-							font-weight: 400;
-							font-family: "PingFangSC-Regular";
-							color: #ff3167;
-							span{
-								font-size: 0.22rem;
-								color: #808080;
-								text-decoration: line-through;
-								margin-left : 0.2rem;
-							}
-							
-					}
-				}
-			}
-		}
+		
 	}
 </style>

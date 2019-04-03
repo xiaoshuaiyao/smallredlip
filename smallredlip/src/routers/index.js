@@ -4,6 +4,7 @@ import redlip from './redlip'
 import shopping from './shopping'
 import search from './search'
 import video from './redlip/video'
+
 Vue.use(Router)
 
 export default new Router({
@@ -15,6 +16,7 @@ export default new Router({
     redlip,
     shopping,
     search,
-    video
+    video,
+	
   ]
 })
