@@ -16,6 +16,7 @@ export default new Router({
     redlip,
     shopping,
     search,
-    video
+    video,
+    work
   ]
 })

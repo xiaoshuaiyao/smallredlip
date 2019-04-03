@@ -1,7 +1,7 @@
 export default {
-    path:"/redlip/video",
-    component:()=>import("@/views/redlip/video"),
-    name:"video",
+    path:"/redlip/work",
+    component:()=>import("@/views/redlip/work"),
+    name:"work",
     meta:{
         tabBarFlag:true
     }

@@ -2,9 +2,9 @@
   <div class="concent">
     <div class="concent_text" v-for="(item,index) in concents">
       <div class="concent_top">
-        <div class="concent_top_left">
+        <router-link class="concent_top_left" tag="div" to="/redlip/work">
           <img :src="item.img" alt>
-        </div >
+        </router-link>
         <div class="concent_top_center">
           <a href>{{item.name}}</a>
         </div>

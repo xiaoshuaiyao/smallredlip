@@ -9,7 +9,7 @@ import Header from "../../../components/redlip/work/header"
 export default {
   name: "Work",
   components: {
-  Header
+   Header
   }
 };
 </script>
