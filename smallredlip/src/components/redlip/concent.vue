@@ -16,7 +16,7 @@
         <img :src="item.video" alt>
       </router-link>
       <router-link class="concent_btm" :to="item.to" tag="div">
-        <p>{{item.title}}</p>
+        <p>{{item.title}}<span>{{item.aite}}</span></p>
       </router-link>
       <router-link class="concent_bottom" :to="item.to" tag="div" >
         <span>{{item.zan}}</span>
@@ -42,6 +42,7 @@ export default {
           video:
             "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
           title: "一根皮筋，瘦锁骨！",
+          aite:"#国货#",
           zan: "31",
           say: "1",
           collect: "收藏",
@@ -55,6 +56,7 @@ export default {
           video:
             "https://wicdn.xiaohongchun.com/cover/A252346DCBF0AC33.jpg-big2x.jpg",
           title: "叮～春夏口红试色分享来学生党也能轻松拥有！希望大家喜欢啦～   ",
+          aite:"#国货#",
           zan: "31",
           say: "1",
           collect: "收藏",
@@ -68,6 +70,7 @@ export default {
           video:
             "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
           title: "一根皮筋，瘦锁骨！",
+           aite:"#国货#",
           zan: "31",
           say: "1",
           collect: "收藏",
@@ -149,6 +152,9 @@ export default {
   font-size: 0.28rem;
   line-height: 0.4rem;
   color: #010101;
+  span{
+    color: #f9295a;
+  }
 }
 .concent_bottom {
 

@@ -22,6 +22,7 @@
                       </div>
                       <div class="header_top_show_bottom">
                               <p>{{nickname}}</p>
+                              <div class="button">{{add}}</div>
                       </div>
                       <div>
                       </div>
@@ -40,7 +41,8 @@ export default {
       follow:"关注",
       number:"102598",
       bean:"粉丝",
-      nickname:"米儿姐姐"
+      nickname:"米儿姐姐",
+      add:"+关注"
 
     }
   }
@@ -67,13 +69,13 @@ export default {
         }
       }
       .bg_img{
-        width:7.5rem;
-        height: 4.5rem; 
+        width:10rem;
+        height: 10rem; 
         position: absolute;
-        left: 0;
-        top: 0;
-        background: rgba(1,1,1,.5);
-        opacity: .5;
+        left: -1.25rem;
+          top: -5.5rem;
+        background: white;
+        opacity: .7;
         border-radius: 50%;
       }
       .header_top_show{               
@@ -115,14 +117,12 @@ export default {
         height: .46rem;
         margin: 0 auto;
         position: relative;
-        p{
-      
+        p{     
           position: absolute;
           font-size:.3rem;
           color: #fff;
           font-weight: bolder;
-              top: 3.6rem;
+           top: 3.6rem;
         }
-
       }
 </style>
