@@ -65,9 +65,10 @@ export default {
 		},
 		{
 			path:"/shopping",
-			component:()=>import("@/components/shopping/synth"),
+			// component:()=>import("@/components/shopping/synth"),
 			redirect:"/shopping/synth"
-		}
+		},
+		
 	]
 	
 }
