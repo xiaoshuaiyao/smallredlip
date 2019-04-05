@@ -22,11 +22,15 @@
                       </div>
                       <div class="header_top_show_bottom">
                               <p>{{nickname}}</p>
-                              <div class="button">{{add}}</div>
+                           <div class="button">{{add}}</div>
                       </div>
                       <div>
                       </div>
               </div>
+              <div class="bozhu">
+                    <h3>{{bozhu}}</h3>
+              </div>
+             
      </div>
   </div>
   
@@ -42,7 +46,8 @@ export default {
       number:"102598",
       bean:"粉丝",
       nickname:"米儿姐姐",
-      add:"+关注"
+      add:"+关注",
+      bozhu:"护肤、美妆、穿搭博主|爱拍视频"
 
     }
   }
@@ -74,7 +79,7 @@ export default {
         position: absolute;
         left: -1.25rem;
           top: -5.5rem;
-        background: white;
+        background: gray;
         opacity: .7;
         border-radius: 50%;
       }
@@ -123,6 +128,30 @@ export default {
           color: #fff;
           font-weight: bolder;
            top: 3.6rem;
+        }
+      }
+      .button{
+        width: 1.3rem;
+        height: .5rem;
+        background: #ff3167;
+        border-radius:.5rem;
+        position: absolute;
+        top: 4.3rem;
+        color: #fff;
+        font-size: .24rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bozhu{
+       
+        padding-top: .5rem;
+        margin: 0 auto;
+        text-align: center;
+        h3{
+             color: #222;
+             font-size: 12px;
+             font-weight: 400;
         }
       }
 </style>

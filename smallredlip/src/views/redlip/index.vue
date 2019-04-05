@@ -7,23 +7,23 @@
 </template>
 
 <script>
-import Vuex from "vuex";
+import {getNowRedlip} from "@/api/api"
+import Vuex from "Vuex";
 import Concent from "../../components/redlip/concent";
 import Footer from "../../components/redlip/footer";
 export default {
   name: "redlip",
-  created(){
-    this.getRedlip()
-  },
   components: {
     Footer,
     Concent
   },
-  methods:{
-      ...Vuex.mapActions({
-        getRedlip:"redlip/getActionsNowRedlip"
-      })
- 
-}
+  created(){
+    this.getActionsNowRedlip();
+  },
+  methods: {
+    ...Vuex.mapActions({
+      getActionsNowRedlip:"redlip/getActionsNowRedlip"
+    })
+  },
 }
 </script>

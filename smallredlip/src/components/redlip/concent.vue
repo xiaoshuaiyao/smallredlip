@@ -1,27 +1,28 @@
 <template>
   <div class="concent">
-    <div class="concent_text" v-for="(item,index) in concents">
+    <!-- <div class="concent_text" v-for="item in nowRedlipList"> -->
+      <div class="concent_text" v-for="(item,index) in videoList">
       <div class="concent_top">
         <router-link class="concent_top_left" tag="div" to="/redlip/work">
-          <img :src="item.img" alt>
+          <img :src="item.video.user.avatar" alt>
         </router-link>
         <div class="concent_top_center">
-          <a href>{{item.name}}</a>
+          <a href>{{item.video.user.nick}}</a>
         </div>
         <div class="concent_top_right">
-          <b>{{item.watch}}</b>
+          <b>+关注</b>
         </div>
       </div>
-      <router-link class="concent_mid" :to="item.to" tag="div">
-        <img :src="item.video" alt>
+      <router-link class="concent_mid" to="/redlip/video" tag="div">
+        <img :src="item.video.cover_url" alt>
       </router-link>
-      <router-link class="concent_btm" :to="item.to" tag="div">
-        <p>{{item.title}}<span>{{item.aite}}</span></p>
+      <router-link class="concent_btm" to="/redlip/video" tag="div">
+        <p>{{item.video.dcrp}}</p>
       </router-link>
-      <router-link class="concent_bottom" :to="item.to" tag="div" >
-        <span>{{item.zan}}</span>
-        <span>{{item.say}}</span>
-        <span>{{item.collect}}</span>
+      <router-link class="concent_bottom" to="/redlip/video" tag="div" >
+        <span><img  class="c66" src="https://wicdn.xiaohongchun.com/xhc-plat/1493795946871_PRt5K6mCmx.png" alt="">{{item.video.comment_count}}</span>
+        <span><img class="c67" src="https://wicdn.xiaohongchun.com/xhc-plat/1493795728987_nTwKbS2pRZ.png" alt="">{{item.video.collection_count}}</span>
+        <span><img class="c67" src="https://wicdn.xiaohongchun.com/xhc-plat/1493795728983_mPQBKhTJBS.png" alt=""> 收藏</span>
       </router-link>
     </div>
   </div>
@@ -29,54 +30,61 @@
 </template>
 
 <script>
+import Vuex from "vuex"
+
 export default {
   name: "Concent",
+   computed: {
+    ...Vuex.mapState({
+      videoList:state=>state.redlip.nowVideoList
+    })
+  },
   data() {
     return {
-      concents: [
-        {
-          img:
-            "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
-          name: "路遥",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
-          title: "一根皮筋，瘦锁骨！",
-          aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video"
-        },
-        {
-           img:
-            "https://wicdn.xiaohongchun.com/cover/2ECB1EE4EF8CED71.jpg-avatars3x.jpg",
-          name: "Kathikds",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/A252346DCBF0AC33.jpg-big2x.jpg",
-          title: "叮～春夏口红试色分享来学生党也能轻松拥有！希望大家喜欢啦～   ",
-          aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video"
-        },
-        {
-           img:
-            "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
-          name: "路遥",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
-          title: "一根皮筋，瘦锁骨！",
-           aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video"
-        }
-      ]
+      // concents:[
+      //   {
+      //     img:
+      //       "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
+      //     name: "路遥",
+      //     watch: "+关注",
+      //     video:
+      //       "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
+      //     title: "一根皮筋，瘦锁骨！",
+      //     aite:"#国货#",
+      //     zan: "31",
+      //     say: "1",
+      //     collect: "收藏",
+      //     to:"/redlip/video"
+      //   },
+      //   {
+      //      img:
+      //       "https://wicdn.xiaohongchun.com/cover/2ECB1EE4EF8CED71.jpg-avatars3x.jpg",
+      //     name: "Kathikds",
+      //     watch: "+关注",
+      //     video:
+      //       "https://wicdn.xiaohongchun.com/cover/A252346DCBF0AC33.jpg-big2x.jpg",
+      //     title: "叮～春夏口红试色分享来学生党也能轻松拥有！希望大家喜欢啦～   ",
+      //     aite:"#国货#",
+      //     zan: "31",
+      //     say: "1",
+      //     collect: "收藏",
+      //     to:"/redlip/video"
+      //   },
+      //   {
+      //      img:
+      //       "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
+      //     name: "路遥",
+      //     watch: "+关注",
+      //     video:
+      //       "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
+      //     title: "一根皮筋，瘦锁骨！",
+      //      aite:"#国货#",
+      //     zan: "31",
+      //     say: "1",
+      //     collect: "收藏",
+      //     to:"/redlip/video"
+      //   }
+      // ]
     };
   }
 };
@@ -95,7 +103,7 @@ export default {
   position: relative;
   padding: 0 0.3rem;
   width: 7.5rem;
-  height: 7.78rem;
+  height: 8.5rem;
   border-bottom: 0.2rem solid #efefef;
 }
 .concent_top {
@@ -128,6 +136,13 @@ export default {
   border-radius: 0.2rem;
   text-align: center;
 }
+.active{
+   width: 1.3rem;
+  height: 0.46rem;
+  background: rgb(249, 41, 90);
+  border-radius: 0.2rem;
+  text-align: center;
+}
 .concent_top_right > b {
   line-height: 0.46rem;
   color: #f8f8f8;
@@ -150,11 +165,14 @@ export default {
 }
 .concent_btm > p {
   font-size: 0.28rem;
-  line-height: 0.4rem;
+  line-height: .4rem;
   color: #010101;
-  span{
-    color: #f9295a;
-  }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+  height: 1.2rem;
 }
 .concent_bottom {
 
@@ -177,5 +195,10 @@ export default {
   color: #999;
   font-size: 0.28rem;
   text-align: center;
+  img{
+    font-size: .32rem;
+    display: inline-block;
+    margin-right: .2rem;
+  }
 }
 </style>
