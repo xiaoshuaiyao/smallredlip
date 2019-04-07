@@ -4,7 +4,7 @@
       <p>{{til}}</p>
     </div>
     <div class="concent_label">
-      <a href v-for="item in goods">{{item}}</a>
+      <router-link v-for="item in goods" to="/search/message">{{item}}</router-link>
     </div>
     <div class="record" v-for="item in records">
             <div class="record_time"><span>{{item.time}}</span></div>
@@ -14,6 +14,7 @@
     <div class="history">
             <p>清除历史记录</p>
     </div>
+     
   </div>
 </template>
 

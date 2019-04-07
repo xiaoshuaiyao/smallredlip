@@ -5,6 +5,10 @@ import shopping from './shopping'
 import search from './search'
 import video from './redlip/video'
 import work from './redlip/work'
+import moon from './redlip/moon'
+import page from './shopping/page'
+import message from './search/message'
+import cont from './search/message/cont'
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +21,10 @@ export default new Router({
     shopping,
     search,
     video,
-    work
+    work,
+    moon,
+    page,
+    message,
+    cont
   ]
 })

@@ -2,7 +2,7 @@ module.exports = {
     devServer:{
         proxy:{
             "/api":{
-                target:"https://napi.xiaohongchun.com",
+                target:"http://localhost:3000",
                 changeOrigin:true,
                 pathRewrite:{
                     "^api":""
@@ -11,4 +11,4 @@ module.exports = {
         }
     }
 }
-
+//http://localhost:3000/page

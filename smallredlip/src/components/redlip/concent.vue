@@ -16,7 +16,7 @@
         <img :src="item.video" alt>
       </router-link>
       <router-link class="concent_btm" :to="item.to" tag="div">
-        <p>{{item.title}}<span>{{item.aite}}</span></p>
+        <p>{{item.title}}<router-link tag="span" :to="item.paths">{{item.aite}}</router-link></p>
       </router-link>
       <router-link class="concent_bottom" :to="item.to" tag="div" >
         <span>{{item.zan}}</span>
@@ -46,7 +46,8 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/redlip/video"
+          to:"/redlip/video",
+          paths:"/redlip/moon"
         },
         {
            img:
@@ -60,7 +61,8 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/redlip/video"
+          to:"/redlip/video",
+          paths:"/redlip/moon"
         },
         {
            img:
@@ -74,7 +76,8 @@ export default {
           zan: "31",
           say: "1",
           collect: "收藏",
-          to:"/redlip/video"
+          to:"/redlip/video",
+          paths:"/redlip/moon"
         }
       ]
     };

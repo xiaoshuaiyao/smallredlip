@@ -1,0 +1,96 @@
+{
+    "page": [{
+        "code": 0,
+        "data": [{
+            "g_id": 17442,
+            "g_title": "平价chanel山茶花",
+            "g_name": "VIDIVICI 女神蚕丝温和泡沫洁面乳 120ml",
+            "g_image": "https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17442_1551974402814.jpg",
+            "g_price_market": 139,
+            "g_price_shop": 129,
+            "gd_number": 9,
+            "jump_url": "xhc://xiaohongchun/params?goods=17442&track_info="
+        }, {
+            "g_id": 16628,
+            "g_title": "矿物洁面不伤肤",
+            "g_name": "UNNY 氨基酸洗面奶 120ml",
+            "g_image": "https://wicdn.xiaohongchun.com/goodsmark/goodsmark_16628_1544756404108.jpg",
+            "g_price_market": 98,
+            "g_price_shop": 69,
+            "gd_number": 18,
+            "jump_url": "xhc://xiaohongchun/params?goods=16628&track_info="
+        }, {
+            "g_id": 4516,
+            "g_title": "洗出牛奶肌",
+            "g_name": "Beauty Buffet Q10 牛奶洁面乳 100ml",
+            "g_image": "https://wicdn.xiaohongchun.com/xhc-plat/1547433329534_4YJeJbpxHY.jpg",
+            "g_price_market": 98,
+            "g_price_shop": 45,
+            "gd_number": 15,
+            "jump_url": "xhc://xiaohongchun/params?goods=4516&track_info="
+        }, {
+            "g_id": 17752,
+            "g_title": "绵密泡沫温和清洁",
+            "g_name": "Curel 珂润 润浸保湿洁颜泡沫 150ml",
+            "g_image": "https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17752_1553824986282.jpg",
+            "g_price_market": 118,
+            "g_price_shop": 98,
+            "gd_number": 14,
+            "jump_url": "xhc://xiaohongchun/params?goods=17752&track_info="
+        }, {
+            "g_id": 16548,
+            "g_title": "氨心护肤每一步",
+            "g_name": "欧净 氨基酸金箔柔润保湿洁面皂 100g",
+            "g_image": "https://wicdn.xiaohongchun.com/xhc-plat/1536304042910_dEMQCXk6x8.jpg",
+            "g_price_market": 59,
+            "g_price_shop": 49,
+            "gd_number": 31,
+            "jump_url": "xhc://xiaohongchun/params?goods=16548&track_info="
+        }, {
+            "g_id": 15386,
+            "g_title": "《向往的生活》同款",
+            "g_name": "Amino mason 氨基研 氨基酸头皮护理滋养洗发水 450ml",
+            "g_image": "https://wicdn.xiaohongchun.com/goodsmark/goodsmark_15386_1546505899555.jpg",
+            "g_price_market": 218,
+            "g_price_shop": 158,
+            "gd_number": 61,
+            "jump_url": "xhc://xiaohongchun/params?goods=15386&track_info="
+        }, {
+            "g_id": 5179,
+            "g_title": "洁面好帮手",
+            "g_name": "CAREMILLE 珂曼 0.1mm细腻泡沫洁面起泡网",
+            "g_image": "https://wicdn.xiaohongchun.com/xhc-plat/1545446892253_x2tTm3w5zS.jpg",
+            "g_price_market": 19,
+            "g_price_shop": 13,
+            "gd_number": 3121,
+            "jump_url": "xhc://xiaohongchun/params?goods=5179&track_info="
+        }, {
+            "g_id": 17770,
+            "g_title": "中药滋养好肌肤",
+            "g_name": "Sulwhasoo 雪花秀 顺行柔和泡沫洗面奶 200ml",
+            "g_image": "https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17770_1551974403203.jpg",
+            "g_price_market": 320,
+            "g_price_shop": 178,
+            "gd_number": 24,
+            "jump_url": "xhc://xiaohongchun/params?goods=17770&track_info="
+        }, {
+            "g_id": 17205,
+            "g_title": "牛奶洁面净透白",
+            "g_name": "Milk Skin 奶肌 牛奶洁面乳 100g",
+            "g_image": "https://wicdn.xiaohongchun.com/xhc-plat/1540959890685_xnDejNxtY2.jpg",
+            "g_price_market": 138,
+            "g_price_shop": 98,
+            "gd_number": 16,
+            "jump_url": "xhc://xiaohongchun/params?goods=17205&track_info="
+        }, {
+            "g_id": 15627,
+            "g_title": "温和酵母新“净”界",
+            "g_name": "自然之名 酵母植萃焕能活肤洁颜泡 150ml",
+            "g_image": "https://wicdn.xiaohongchun.com/xhc-plat/1530531642492_RMDtBibwKQ.jpg",
+            "g_price_market": 99,
+            "g_price_shop": 49,
+            "gd_number": 32,
+            "jump_url": "xhc://xiaohongchun/params?goods=15627&track_info="
+        }]
+    }]
+}
