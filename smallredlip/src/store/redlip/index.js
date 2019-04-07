@@ -13,8 +13,8 @@ export default{
     actions:{
       async getActionsNowRedlip({commit},params){
       let data = await getNowRedlip(params)
-      console.log(data);
-        commit('getMutationNowRedlip',data)
+      console.log(data[0].data);
+        commit('getMutationNowRedlip',data[0].data)
         }
     },
    

@@ -1,11 +1,11 @@
 <template>
 	<div class="concent">
-<<<<<<< HEAD
+
 		<div class="concent_a">
-=======
+
 		
 			<div class="concent_a">
->>>>>>> long
+
 			<router-link class="search-left" tag="div" to="/search">
 				<i class="iconfont" v-html="icon"></i>
 				<span>{{val}}</span>
@@ -14,19 +14,16 @@
 				<i class="iconfont" v-html="icon1"></i>
 			</div>
 		</div>
-<<<<<<< HEAD
 
 		<div class="nav">
 			<ul>
 				<li v-for="item in concents">{{item}}</li>
-=======
 		
 		
 
 		<div class="nav">
 			<ul>
-				<Router-link v-for="item in concents" tag="li" :to="item.to">{{item.p}}</Router-link>
->>>>>>> long
+				<Router-link v-for="item in concents" tag="li" :to="item.to" >{{item.p}}</Router-link>
 			</ul>
 
 		</div>
@@ -119,31 +116,6 @@
 			</ul>
 		</div>
 		
-<<<<<<< HEAD
-		<div class="nav1">
-			<ul>
-				<li  @click="handleClick(index)" v-for="(item,index) in nav1" :class="index=indexCon?'active':''">{{item}}</li>
-
-			</ul>
-		</div>
-		
-		<div class="footer">
-			<ul>
-				<router-link tag="li" to="/shopping/page">
-					<img src="https://wicdn.xiaohongchun.com/xhc-plat/1541765181989_4FDxEwzWe8.jpg" alt="">
-					<p>温泉卸妆水</p>
-					<p>UNNY 四合一温和卸妆水 500ml</p>
-					<p>￥69<span>99</span></p>
-				</router-link>
-				<li><img src="https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17634_1552471847566.jpg" alt="">
-					<p>滚走细纹黑眼圈</p>
-					<p>It's skin 伊思 红参蜗牛滚珠眼霜 15ml*2</p>
-					<p>￥189<span>295</span></p>
-				</li>
-
-			</ul>
-		</div>
-=======
 		<div class="nav2" :class="flag?'nav1':''">
 			<ul>
 				<router-link tag="li" to="/shopping/synth">综合</router-link>
@@ -161,7 +133,6 @@
 		</keep-alive>
 		
 
->>>>>>> long
 	</div>
 
 </template>
@@ -175,52 +146,19 @@
 		data() {
 			
 			return {
-<<<<<<< HEAD
+
 				indexCon :0,
-=======
+
 					flag:false,
 					
 					
 					
->>>>>>> long
+
 				icon: "&#xe647;",
 				val: "口红",
 				icon1: "&#xe6b8;",
 				concents: [
-<<<<<<< HEAD
 					"精选", "排行榜", "护肤彩妆", "家居生活", "个人护理", "时尚穿搭", "没事保健"
-=======
-					{
-						p:"精选",
-						to:"achoiceness"
-					},
-					{
-						p:"排行榜",
-						to:"aranking"
-					},
-					{
-						p:"护肤彩妆",
-						to:"askin"
-					},
-					{
-						p:"家居生活",
-						to:"aliving"
-					},
-					{
-						p:"个人护理",
-						to:"apersonal"
-					},
-					{
-						p:"时尚穿搭",
-						to:"afashion"
-					},
-					{
-						p:"没事保健",
-						to:"acare"
-					}
-					
-					// "精选", "排行榜", "护肤彩妆", "家居生活", "个人护理", "时尚穿搭", "没事保健"
->>>>>>> long
 				],
 				Img: "https://wicdn.xiaohongchun.com/goodsmark/1553570321577_J7Td2KmP54.jpg",
 				Img2: "https://wicdn.xiaohongchun.com/goodsmark/1554084603181_np2Hz4aNW5.jpg",
@@ -306,31 +244,7 @@
 					}
 				],
 				nav1:[
-<<<<<<< HEAD
 					"综合","销量","最新","价格","仓库"
-=======
-					{
-					a:"综合",
-					to:"/shopping/synth"
-				},
-				{
-					a:"最新",
-					to:"/shopping/new"
-				},
-				{
-					a:"销量",
-					to:"/shopping/sales"
-				},
-				{
-					a:"价格",
-					to:"/shopping/price"
-				},
-				{
-					a:"仓库",
-					
-				},
-				
->>>>>>> long
 				]
 
 			}
@@ -344,7 +258,6 @@
 					disableOnInteraction: false,
 				}
 			})
-<<<<<<< HEAD
 		},
 		methods:{
 			handleClick(n){
@@ -352,30 +265,11 @@
 			    this.$emit("handleToggle",n);
 			}
 		}
-=======
-			window.addEventListener('scroll', this.handleScroll)
-
-
-		},
-		methods:{
-					handleScroll () {
-					var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-			  // console.log(scrollTop)
-				if(scrollTop>2805){
-					this.flag=true;
-				}else{
-					this.flag=false;
-				}
-			},
-		}
-
->>>>>>> long
 	}
 </script>
 
 <style lang="scss" scoped>
 	.concent {
-<<<<<<< HEAD
 		margin-top: 1.1rem;
 		overflow: auto;
 		width : 7.5rem;
@@ -394,28 +288,6 @@
 				margin: 0rem 0.8rem 0 0.6rem;
 				border-radius: 0.4rem;
 
-=======
-		margin-top: 1.8rem;
-		
-		width : 100%;
-		
-	
-			.concent_a {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			position: fixed;
-			background : white;
-			z-index:5;
-			height : 0.9rem;
-			top : 0.9rem;
-			.search-left {
-				width: 5.5rem;
-				border: 1px solid #ccc;
-				margin: 0rem 0.8rem 0 0.6rem;
-				border-radius: 0.4rem;
-				
->>>>>>> long
 				.iconfont {
 					font-size: 0.4rem;
 					font-weight: 900;
@@ -444,16 +316,10 @@
 				}
 			}
 		}
-<<<<<<< HEAD
-=======
-		
-		
->>>>>>> long
 
 		.nav {
 			width: 100%;
 			// background : red;
-<<<<<<< HEAD
 			margin-top: 0.1rem;
 			background-color: white;
 			height: 0.6rem;
@@ -464,45 +330,16 @@
 				//background: pink;
 				height: 100%;
 				margin-left: 0.1rem;
-=======
-			
-			background-color: white;
-			height: 0.66rem;
-			padding-left:0.1rem;
-			//background: yellow;
-			// overflow: hidden;
-			position: fixed;
-			overflow:auto;
-			
-			z-index:5;
-			ul {
-				//background: pink;
-				height: 100%;
-				width : 154%;
->>>>>>> long
 
 				li {
 					margin: 0 0.5rem 0 0.1rem;
 					float: left;
 					line-height: 0.6rem;
-<<<<<<< HEAD
 					font-size: 0.26rem;
 					color:black;
 				}
 			}
 		}
-=======
-					font-size: 0.28rem;
-					color:#222;
-					
-				}
-			}
-		}
-		.nav>ul>.router-link-active{
-			border-bottom: 0.04rem solid #ff3167;
-			    font-size: 0.32rem;
-		}
->>>>>>> long
 
 		.Pic {
 			width : 7.5rem;
@@ -602,23 +439,13 @@
 				height : 100%;
 			}
 		}
-<<<<<<< HEAD
 		.nav1{
-=======
-		.nav2{
->>>>>>> long
 			width : 100%;
 			height : 0.88rem;
 
 			border-top: 3px solid #f5f5f5;
 			margin-top:0.3rem;
-<<<<<<< HEAD
 			position: relative;
-=======
-			//position: sticky;
-
-			background : white;
->>>>>>> long
 			ul{
 				li{
 					width : 20%;
@@ -630,7 +457,6 @@
 				}
 			}
 		}
-<<<<<<< HEAD
 		.nav1>.active{
 			    color: #ff3167;
 		}
@@ -680,15 +506,5 @@
 				}
 			}
 		}
-=======
-		.nav1{
-				position: fixed;
-				top:200px;
-		}
-		.nav2>ul>.router-link-active{
-			    color: #ff3167;
-		}
-		
->>>>>>> long
 	}
 </style>

@@ -2,10 +2,6 @@
   <div class="shopping">
 		<Header/>
     <Concent/>
-<<<<<<< HEAD
-=======
-
->>>>>>> long
   </div>
 </template>
 
@@ -17,14 +13,8 @@ export default {
   name:"shopping",
 		components:{
 			Header,
-<<<<<<< HEAD
 	   	Concent
 	}
-=======
-		Concent
-	},
-
->>>>>>> long
 }
 </script>
 <style lang="css">

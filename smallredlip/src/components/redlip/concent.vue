@@ -1,6 +1,5 @@
 <template>
   <div class="concent">
-    <!-- <div class="concent_text" v-for="item in nowRedlipList"> -->
       <div class="concent_text" v-for="(item,index) in videoList">
       <div class="concent_top">
         <router-link class="concent_top_left" tag="div" to="/redlip/work">
@@ -16,13 +15,8 @@
       <router-link class="concent_mid" to="/redlip/video" tag="div">
         <img :src="item.video.cover_url" alt>
       </router-link>
-<<<<<<< HEAD
       <router-link class="concent_btm" to="/redlip/video" tag="div">
         <p>{{item.video.dcrp}}</p>
-=======
-      <router-link class="concent_btm" :to="item.to" tag="div">
-        <p>{{item.title}}<router-link tag="span" :to="item.paths">{{item.aite}}</router-link></p>
->>>>>>> yuan
       </router-link>
       <router-link class="concent_bottom" to="/redlip/video" tag="div" >
         <span><img  class="c66" src="https://wicdn.xiaohongchun.com/xhc-plat/1493795946871_PRt5K6mCmx.png" alt="">{{item.video.comment_count}}</span>
@@ -46,7 +40,6 @@ export default {
   },
   data() {
     return {
-<<<<<<< HEAD
       // concents:[
       //   {
       //     img:
@@ -91,55 +84,6 @@ export default {
       //     to:"/redlip/video"
       //   }
       // ]
-=======
-      concents: [
-        {
-          img:
-            "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
-          name: "路遥",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
-          title: "一根皮筋，瘦锁骨！",
-          aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video",
-          paths:"/redlip/moon"
-        },
-        {
-           img:
-            "https://wicdn.xiaohongchun.com/cover/2ECB1EE4EF8CED71.jpg-avatars3x.jpg",
-          name: "Kathikds",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/A252346DCBF0AC33.jpg-big2x.jpg",
-          title: "叮～春夏口红试色分享来学生党也能轻松拥有！希望大家喜欢啦～   ",
-          aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video",
-          paths:"/redlip/moon"
-        },
-        {
-           img:
-            "https://wicdn.xiaohongchun.com/cover/BFD50E8D9216B911.jpg-avatars3x.jpg",
-          name: "路遥",
-          watch: "+关注",
-          video:
-            "https://wicdn.xiaohongchun.com/cover/9D4DD1BA22E35ECE.jpg-big2x.jpg",
-          title: "一根皮筋，瘦锁骨！",
-           aite:"#国货#",
-          zan: "31",
-          say: "1",
-          collect: "收藏",
-          to:"/redlip/video",
-          paths:"/redlip/moon"
-        }
-      ]
->>>>>>> yuan
     };
   }
 };
