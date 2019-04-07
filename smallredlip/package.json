@@ -7,7 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.18.0",
+=======
+>>>>>>> long
     "swiper": "^4.5.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
