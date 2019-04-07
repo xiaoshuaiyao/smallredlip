@@ -129,12 +129,12 @@
 		
 		<div class="footer">
 			<ul>
-				<li>
+				<router-link tag="li" to="/shopping/page">
 					<img src="https://wicdn.xiaohongchun.com/xhc-plat/1541765181989_4FDxEwzWe8.jpg" alt="">
 					<p>温泉卸妆水</p>
 					<p>UNNY 四合一温和卸妆水 500ml</p>
 					<p>￥69<span>99</span></p>
-				</li>
+				</router-link>
 				<li><img src="https://wicdn.xiaohongchun.com/goodsmark/goodsmark_17634_1552471847566.jpg" alt="">
 					<p>滚走细纹黑眼圈</p>
 					<p>It's skin 伊思 红参蜗牛滚珠眼霜 15ml*2</p>
