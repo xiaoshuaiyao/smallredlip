@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import Vuex from "vuex"
+import {getNowVideo} from "@/api/api"
 import Top from "../../../components/redlip/video/top"
 import Center from "../../../components/redlip/video/center"
 import Footer from "../../../components/redlip/video/footer"
@@ -16,7 +18,15 @@ export default {
     Top,
     Center,
     Footer
-  }
+  },
+   created(){
+    this.getVideo();
+  },
+  methods: {
+    ...Vuex.mapActions({
+      getVideo:"redlip/video/getActionVideo"
+    })
+  },
 };
 </script>
  

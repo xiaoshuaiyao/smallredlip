@@ -63,7 +63,12 @@ export default {
         }
       ]
     };
-  }
+  },
+    computed: {
+    ...Vuex.mapState({
+      videoList:state=>state.redlip.nowVideoList
+    })
+  },
 };
 </script>
 
